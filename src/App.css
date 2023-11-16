@@ -22,7 +22,6 @@ h1{
   color: #bc0c0c;
 }
 
-
 @media only screen and (max-width: 1366px) {
   .container {
     padding: 10px; 
@@ -35,6 +34,5 @@ h1{
 
   h1 {
     font-size: 24px;
-
   }
 }
