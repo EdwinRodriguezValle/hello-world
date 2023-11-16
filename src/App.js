@@ -6,7 +6,7 @@ function App() {
     <div className= "container">
       <div className="hello_wolrd">
         <h1> 
-          Hello World! 
+          Hello World 
           <Hola/>
         </h1>
       </div>

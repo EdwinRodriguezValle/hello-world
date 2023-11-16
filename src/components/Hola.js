@@ -7,7 +7,6 @@ function Hola(){
           <h1 id="hola">Hola Mundo</h1>
         </div>
       );
-  
 }
 
 export default Hola; 
