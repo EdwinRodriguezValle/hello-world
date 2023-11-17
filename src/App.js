@@ -4,7 +4,7 @@ import Hola from './components/Hola';
 function App() {
   return (
     <div className= "container">
-      <div className="hello_wolrd">
+      <div className="hello_wolrd_Edwin">
         <h1> 
           Hello World 
           <Hola/>
