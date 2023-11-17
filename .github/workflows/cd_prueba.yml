@@ -1,23 +1,27 @@
 name: test deployment
+
 on:
-push:
-  branches: 
-    - "prueba"
+  push:
+    branches:
+      - "prueba"
+
 jobs:
   build-and-deploy:
-      runs-on: ubuntu-lastest
-      steps: 
-        - name: Checkout
-          uses: action/checkout@master
-          with:
-            persist-credencials: false
-        - name: Install and Build
-          run: |
-            npm install
-            npm run build
-        - name: Deploy
-          uses: JamesIves/github-pages-deploy-action@3.7.1
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            branch: prueba
-            folder: build
+    runs-on: ubuntu-latest
+    container:
+      image: node:18
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: prueba
+          folder: build
